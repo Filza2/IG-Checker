@@ -19,16 +19,16 @@ def without_list():
 				user+=random.choice(chars)
 		ru=get(f'https://www.instagram.com/{user}/',headers={'Host': 'www.instagram.com','Cookie': 'ig_did==; datr=; csrftoken=; mid==; ig_nrcb=1','User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0','Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','Upgrade-Insecure-Requests': '1','Sec-Fetch-Dest': 'document','Sec-Fetch-Mode': 'navigate','Sec-Fetch-Site': 'none','Sec-Fetch-User': '?1','Cache-Control': 'max-age=0','Te': 'trailers'})
 		if user not in re.findall("<title>(.*?)</title>",ru.text)[0]:
-			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
+			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available <{done}>{Fore.RESET} | {Fore.RED} Not Available <{error}>{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count <{count}> {Fore.RESET}  ',end='')
 			done+=1
 			count+=1
 			saver(user)
 		elif '• Instagram photos and videos' in re.findall("<title>(.*?)</title>",ru.text)[0]:
-			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
+			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available <{done}>{Fore.RESET} | {Fore.RED} Not Available <{error}>{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count <{count}> {Fore.RESET}  ',end='')
 			error+=1
 			count+=1
 		else:
-			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
+			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available <{done}>{Fore.RESET} | {Fore.RED} Not Available <{error}>{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count <{count}> {Fore.RESET}  ',end='')
 			error+=1
 			count+=1	
 def with_list():
@@ -40,16 +40,16 @@ def with_list():
 		user=file.readline().split('\n')[0]
 		ru=get(f'https://www.instagram.com/{user}/',headers={'Host': 'www.instagram.com','Cookie': 'ig_did==; datr=; csrftoken=; mid==; ig_nrcb=1','User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0','Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8','Accept-Language': 'ar,en-US;q=0.7,en;q=0.3','Accept-Encoding': 'gzip, deflate','Upgrade-Insecure-Requests': '1','Sec-Fetch-Dest': 'document','Sec-Fetch-Mode': 'navigate','Sec-Fetch-Site': 'none','Sec-Fetch-User': '?1','Cache-Control': 'max-age=0','Te': 'trailers'})
 		if user not in re.findall("<title>(.*?)</title>",ru.text)[0]:
-			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
+			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available <{done}>{Fore.RESET} | {Fore.RED} Not Available <{error}>{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count <{count}> {Fore.RESET}  ',end='')
 			done+=1
 			count+=1
 			saver(user)
 		elif '• Instagram photos and videos' in re.findall("<title>(.*?)</title>",ru.text)[0]:
-			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
+			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available <{done}>{Fore.RESET} | {Fore.RED} Not Available <{error}>{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count <{count}> {Fore.RESET}  ',end='')
 			error+=1
 			count+=1
 		else:
-			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
+			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available <{done}>{Fore.RESET} | {Fore.RED} Not Available <{error}>{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count <{count}> {Fore.RESET}  ',end='')
 			error+=1
 			count+=1	
 print("""
