@@ -1,10 +1,5 @@
 try:import time,random,re;from colorama import Fore;from requests import get,post
 except ModuleNotFoundError:exit('[!] Download The Missing Module !')
-global x2,j
-x2='[🖤] @TweakPY'
-j='''
-[☑️] NEW USER:︎︎
-'''
 def without_list():
 	count,done,error=0,0,0
 	user=""
@@ -23,7 +18,7 @@ def without_list():
 			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
 			done+=1
 			count+=1
-			try:post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={j}\n𖡃 𝚄𝚂𝙴𝚁: {user}\n\n{x2}')
+			try:post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={user}')
 			except:pass
 			with open('Available.txt', 'a') as x:
 				tl='[] NEW USER -->  '
@@ -51,7 +46,7 @@ def with_list():
 			print(f'\r[{Fore.MAGENTA}${Fore.RESET}] {Fore.GREEN} Available *{done}*{Fore.RESET} | {Fore.RED} Not Available *{error}*{Fore.RESET} | {Fore.LIGHTYELLOW_EX} count *{count}* {Fore.RESET}  ',end='')
 			done+=1
 			count+=1
-			try:post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={j}\n𖡃 𝚄𝚂𝙴𝚁: {user}\n\n{x2}')
+			try:post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={user}')
 			except:pass
 			with open('Available.txt', 'a') as x:
 				tl='[] NEW USER -->  '
