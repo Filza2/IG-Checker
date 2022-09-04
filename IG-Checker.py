@@ -3,7 +3,7 @@ except ModuleNotFoundError:exit('[!] Download The Missing Module !')
 def saver(user):
     ID=''#telegram id
     token=''#telegram bot token
-    try:post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={user}')
+    try:post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text=• New username’s Claimed @{user} 🦦\n\nBy\t@TweakPY\t-\t@vv1ck')
     except:pass
     with open('Available.txt', 'a') as x:
         x.write(user+'\n')
